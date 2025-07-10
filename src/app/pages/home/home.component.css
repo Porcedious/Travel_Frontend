@@ -1,0 +1,1222 @@
+.hero {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hero Slides */
+.hero-slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  /* ✅ Align content to the left */
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  /* position: relative; */
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 17%;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  z-index: 1;
+}
+
+/* Active Slide */
+.active {
+  opacity: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  color: white;
+  text-align: left;
+  /* ✅ Align text to left */
+  /* background: rgba(0, 0, 0, 0.4); */
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: calc(40px);
+  /* ✅ Move text 40px left from center */
+}
+
+/* Text Styling */
+.subheading {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.main-heading {
+  font-size: 70px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.explore-btn {
+  border: none;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  /* width: 175px;
+  transform: rotate(90deg); */
+  color: aqua;
+}
+
+.arrow {
+  font-weight: 1000px;
+}
+
+
+/* ✅ Mobile Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 18px;
+    /* ✅ Center text on mobile */
+    text-align: center;
+    /* ✅ Make text center-aligned */
+    width: 90%;
+  }
+
+  .main-heading {
+    font-size: 30px;
+    /* ✅ Reduce font size on mobile */
+    font-weight: 400px;
+  }
+
+  .subheading {
+    font-size: 15px;
+    font-weight: 200px;
+  }
+
+  /* .explore-btn {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px;
+} */
+}
+
+/* extra load on package-section*/
+.head {
+  text-align: left;
+  margin-left: calc(100px);
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+/* .nav-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(255, 255, 255, 0.8);
+border: none;
+font-size: 20px;
+cursor: pointer;
+padding: 5px;
+height: 35px;
+border-radius: 50%;
+} */
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.nav-btn:hover {
+  background: white;
+}
+
+/* ✅ Ensure Package Section is Visible */
+.packages-section {
+  text-align: center;
+  padding: 50px 0;
+  /* margin-left: 100px; */
+  /* margin-right: 100px; */
+  background: white;
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+  /* ✅ Ensure it has enough space */
+}
+
+.packages-wrapper:not(.animate) {
+  transition: none !important;
+}
+
+
+/* ✅ Fix Images */
+.package-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 1.8s ease-in-out, box-shadow 0.8s ease-in-out;
+}
+
+/* ✅ Fix Responsive View */
+@media (max-width: 768px) {
+  .package-card {
+    flex: 0 0 100%;
+    height: 300px;
+  }
+}
+
+/* font-family: "Bookman", "URW Bookman L", serif; */
+
+.package-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Bookman", "URW Bookman L", serif;
+  transition: opacity 0.3s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+/* ✅ Hidden Details (Shown on Hover) */
+.package-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.package-card:hover {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scale(1.06);
+  /* ✅ Tile grows slightly */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  /* ✅ Add shadow */
+}
+
+.package-card:hover .package-info {
+  opacity: 0;
+  /* ✅ Hide place name */
+}
+
+.package-card:hover .package-details {
+  opacity: 1;
+  /* ✅ Show details */
+  transform: translateY(0);
+  /* ✅ Slide up */
+}
+
+/* Why Us Section */
+.why-us-section {
+  text-align: center;
+  position: relative;
+  background-color: #f0f9ff;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ✅ Full wave behind entire section */
+.why-us-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,197.3C840,203,960,149,1080,133.3C1200,117,1320,139,1380,149.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z'/%3E%3C/svg%3E") no-repeat top center,
+    #eef3ff;
+  background-size: 100% auto;
+  z-index: -1;
+}
+
+
+/* USP Container */
+.usp-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual USP Box */
+.usp-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1;
+  /* Always square */
+  flex: 0 0 calc(25% - 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  max-width: 100%;
+  /* prevents boxes from being too wide */
+  max-height: 100%;
+  position: relative;
+}
+
+p strong {
+  color: #1f2937;
+  /* dark gray for contrast */
+}
+
+
+.usp-box h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.usp-box .scrollable-text {
+  overflow-y: auto;
+  flex-grow: 1;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  max-height: 7.5rem;
+  /* ⬅️ adjust this to how much you want visible */
+  padding-right: 4px;
+  /* space for scrollbar */
+}
+
+
+.usp-box .scrollable-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.usp-box .scrollable-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.usp-box:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .usp-container {
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+    /* Center items when they wrap */
+  }
+
+  .usp-box {
+    flex: 0 0 calc(50% - 20px);
+    /* Two items per row on smaller screens */
+    /* margin: 10px; */
+    margin: 2% 15% 2% 15%;
+  }
+}
+
+@media (max-width: 390px) {
+  .usp-container {
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+    /* Center items when they wrap */
+  }
+
+  .usp-box {
+    flex: 0 0 calc(50% - 20px);
+    /* Two items per row on smaller screens */
+    /* margin: 10px; */
+    margin: 2% 15% 2% 15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .usp-box {
+    flex: 0 0 100%;
+    /* One item per row on very small screens */
+    /* margin: 10px; */
+    margin: 2% 15% 2% 15%;
+  }
+}
+
+
+@media (min-width: 900px) and (min-width: 601px) {
+  .usp-box {
+    flex: 0 0 calc(25% - 40px);
+    /* Fixed width for 4 in a row */
+    aspect-ratio: 1 / 1;
+    /* Maintain square shape */
+    max-width: 340px;
+  }
+
+  .usp-container {
+    gap: 40px;
+    /* Adjust gap for larger screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .usp-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .usp-box {
+    flex: 0 0 calc(50% - 40px);
+    /* Two cards per row, adjust gap as needed */
+    max-width: 340px;
+    /* Optional: set a max width for better sizing */
+    margin: 2% 5% 2% 5%;
+    /* Adjust margins for spacing */
+    aspect-ratio: 1 / 1;
+    /* Keep boxes square */
+  }
+}
+
+/* Hover Effect */
+.usp-box:hover {
+  transform: translateY(-10px);
+}
+
+
+/* ✅ Hover Effect */
+.usp-box:hover {
+  transform: scale(1.05);
+}
+
+.wave-divider {
+  line-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.wave-svg {
+  display: block;
+  /* width: 100%; */
+  height: 100%;
+}
+
+/* ✅ Know More Button */
+.know-more-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.know-more-btn:hover {
+  background: #0056b3;
+}
+
+/* ✅ Responsive: Stack on Small Screens */
+@media (max-width: 768px) {
+  .usp-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.packages-container {
+  display: flex;
+  align-items: center;
+  /* vertically center buttons */
+  justify-content: center;
+  /* center everything horizontally */
+  position: relative;
+  gap: 1rem;
+  /* space between button and swiper */
+  padding: 1rem;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 80%;
+  /* adjust based on design */
+  position: relative;
+  height: 40vh;
+}
+
+.packages-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1rem;
+  /* spacing between cards */
+}
+
+.package-card {
+  min-width: 250px;
+  background: #fff;
+  padding: 2rem;
+  height: 400px;
+  margin: 20px;
+  width: 40%;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.nav-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.packages-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+/* .packages-wrapper {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+} */
+
+.package-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.nav-btn {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.destinations-section {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom right, #f0f9ff, #eef2ff);
+}
+
+/* Make header sticky to top and centered */
+.destinations-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  /* background: linear-gradient(to bottom right, #f0f9ff, #eef2ff); */
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+/* .destinations-header {
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(to bottom right, #f0f9ff, #eef2ff);
+  padding: 1rem;
+  text-align: center;
+} */
+
+/* Destinations title styling */
+.destinations-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #1f2937, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.destinations-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* Make only cards scrollable horizontally */
+.destinations-grid {
+  display: inline-flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 10% 60px 10%;
+  width: 100%;
+  /* margin:0 5% 0 5%; */
+  scroll-snap-type: x mandatory;
+}
+
+/* Destination Card */
+.destination-card {
+  scroll-snap-align: start;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  flex: 0 0 auto;
+}
+
+/* Hover Effects */
+.destination-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+/* Destination Image */
+.destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.destination-card:hover .destination-image {
+  transform: scale(1.15);
+}
+
+/* Destination Overlay */
+.destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 100%);
+  transition: opacity 0.3s ease;
+}
+
+/* Destination Name */
+.destination-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  backdrop-filter: blur(3px);
+}
+
+/* Destination Details */
+.destination-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.destination-card:hover .destination-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.destination-card:hover .destination-name {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.destinations-grid {
+  scroll-padding-left: 1rem;
+  /* ensures snap respects margin on first tile */
+  scroll-padding-right: 1rem;
+  /* ensures snap respects margin on first tile */
+}
+
+/* Hide mobile-details by default */
+.mobile-details {
+  display: none;
+}
+
+/* Show mobile details on small screens */
+@media (max-width: 1024px) {
+  .mobile-details {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #f3f4f6;
+  }
+
+  .mobile-details .duration,
+  .mobile-details .price {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  /* Disable desktop hover details on mobile */
+  .destination-details {
+    display: none !important;
+  }
+}
+
+/* Desktop: keep hover details as before */
+@media (min-width: 1025px) {
+  .mobile-details {
+    display: none !important;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .destinations-header {
+    padding: 1rem 5%;
+  }
+
+  .destinations-title {
+    font-size: 1.75rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .destinations-subtitle {
+    font-size: 1rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .destinations-grid {
+    padding-left: 1rem;
+    /* 👈 Adds space on left side of scroll area */
+    padding-right: 1rem;
+    /* optional, for right end balance */
+  }
+
+  .destination-card:first-child {
+    margin-left: 5%;
+    /* 👈 Additional gap before first card */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.section-description {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.star-rating {
+  display: flex;
+  margin-right: 0.5rem;
+}
+
+.star {
+  color: #f59e0b;
+  font-size: 1.5rem;
+}
+
+.rating-text {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Center the grid container and align items */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+  /* Center the grid items */
+  max-width: 1200px;
+  /* Optional: Set a max-width for the grid */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.testimonial-info {
+  text-align: left;
+}
+
+.testimonial-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.testimonial-location,
+.testimonial-destination {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+
+.testimonial-rating {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.rating-star {
+  color: #f59e0b;
+  font-size: 1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #4b5563;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.verified-badge {
+  margin-top: 1rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+/* Call to Action */
+.cta-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.travel-section {
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background:  #eef2ff;
+}
+
+.destinations-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #1f2937, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.destinations-subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* .travel-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 5vw 60px 5vw;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 10vw;
+  transition: all 0.3s ease;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+} */
+.travel-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 6vw 60px 6vw;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 6vw;
+  scroll-padding-right: 6vw;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.travel-grid::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+
+@media (max-width: 768px) {
+  .travel-grid {
+    padding-left: 8%;
+    padding-right: 5%;
+    scroll-padding-left: 20px;
+    justify-content: flex-start;
+  }
+}
+
+.travel-card {
+  scroll-snap-align: start;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  flex: 0 0 auto;
+}
+
+/* .travel-card {
+  flex: 0 0 auto;
+  width: 85vw;
+  height: 480px;
+  position: relative;
+  border-radius: 0.75rem;
+  scroll-snap-align: start; /* ✅ Snap from the left 
+  background: white;
+} */
+
+/* .travel-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+} */
+
+.travel-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+
+.travel-image-container {
+  width: 100%;
+  height: 100%;
+}
+
+.travel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
+  transition: transform 0.5s ease;
+}
+
+.travel-card:hover .travel-image {
+  transform: scale(1.05);
+  /* Optional: Adds a slight zoom effect on hover */
+}
+
+.travel-card:hover .travel-image {
+  transform: scale(1.15);
+}
+
+.travel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 100%);
+}
+
+.travel-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  backdrop-filter: blur(3px);
+}
+
+.travel-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+.travel-details {
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+  width: 100%;
+  height: 30%;
+  /* padding: 20px; */
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.travel-card:hover .travel-details {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.travel-card:hover .travel-name {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.travel-details .duration,
+.travel-details .price {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.mobile-details {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobile-details {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #f3f4f6;
+  }
+
+  .travel-details {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-details {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .destinations-header {
+    padding: 1rem 5%;
+  }
+
+  .destinations-title {
+    font-size: 1.75rem;
+  }
+
+  .destinations-subtitle {
+    font-size: 1rem;
+  }
+
+  .travel-grid {
+    padding: 0 7vw 40px 7vw;
+    scroll-padding-inline: 7vw;
+    gap: 16px;
+  }
+
+  .travel-card {
+    width: 85vw;
+    /* Show one tile at a time */
+    height: 480px;
+  }
+
+  .destinations-title {
+    font-size: 1.75rem;
+  }
+
+  .destinations-subtitle {
+    font-size: 1rem;
+  }
+}

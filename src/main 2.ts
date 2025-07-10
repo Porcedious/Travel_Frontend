@@ -11,7 +11,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     provideRouter(routes),
-    provideAnimations(),
+    provideAnimations(), // ✅ Enables Angular Material Animations
     importProvidersFrom(MatToolbarModule)
   ]
 }).catch(err => console.error(err));

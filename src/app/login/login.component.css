@@ -1,0 +1,116 @@
+/* ✅ General Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('https://res.cloudinary.com/dy6qrgrym/image/upload/v1741548022/fby1ujlwo0zqnbs9nfqx.jpg') no-repeat center center/cover;
+}
+
+/* ✅ Login Box */
+.login-box {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ✅ Input Group */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Phone Number Input */
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.phone-input select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100px;
+}
+
+/* ✅ OTP Input and Button */
+.otp-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.otp-container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ✅ Buttons */
+.login-btn, .verify-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.login-btn:hover, .verify-btn:hover {
+  background: #e04e2a;
+}
+
+/* ✅ Error Message */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* ✅ Signup Link */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.signup-link button:hover {
+  color: #0056b3;
+}
+
+.success-message {
+  color: #28a745; /* ✅ Green Success Message */
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}

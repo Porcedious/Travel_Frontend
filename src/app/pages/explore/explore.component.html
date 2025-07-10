@@ -1,0 +1,281 @@
+<div *ngIf="selectedDestination" #container class="explore-page">
+  <div class="hero-section1">
+    <div class="hero-slideshow">
+      <div class="hero-slide" *ngFor="let slide of selectedDestination.topImages; let i = index"
+        [ngClass]="{ 'active': i === activeSlide }" [style.backgroundImage]="'url(' + slide + ')'">
+      </div>
+    </div>
+    <div class="hero-overlay1">
+      <h1 class="city-name">{{ selectedDestination?.id }}</h1>
+      <div class="location-facts">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <div class="container">
+      <!-- Main Content -->
+      <div class="main-content">
+        <h2 class="title">{{ selectedDestination.introSection.title }}</h2>
+        <p class="subtitle">{{ selectedDestination.introSection.subtitle }}</p>
+        <div class="max-w-4xl mx-auto">
+          <p class="description">{{ selectedDestination.introSection.description }}</p>
+        </div>
+      </div>
+      <!-- Highlights Grid -->
+      <div class="highlights-grid">
+        <div *ngFor="let highlight of selectedDestination.introSection.highlights" class="highlight-card">
+          <div class="highlight-icon">{{ highlight?.icon }}</div>
+          <div class="highlight-value">{{ highlight?.value }}</div>
+          <div class="highlight-title">{{ highlight?.title }}</div>
+        </div>
+      </div>
+      <!-- Quick Facts -->
+      <div class="quick-facts">
+        <h3 class="quick-facts-title">Quick Facts</h3>
+        <div class="facts-grid">
+          <div *ngFor="let fact of selectedDestination.introSection.quickFacts" class="fact-item">
+            <div class="fact-icon">
+              <span *ngIf="fact.label.includes('Time')">📅</span>
+              <span *ngIf="fact.label.includes('Language')">🌐</span>
+              <span *ngIf="fact.label.includes('Currency')">💰</span>
+              <span *ngIf="fact.label.includes('Zone')">⏰</span>
+              <span
+                *ngIf="!fact.label.includes('Time') && !fact.label.includes('Language') && !fact.label.includes('Currency') && !fact.label.includes('Zone')">📍</span>
+            </div>
+            <div>
+              <div class="fact-label">{{ fact.label }}</div>
+              <div class="fact-value">{{ fact.value }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section id="flip-card-services" class="flip-card-services section-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>{{ selectedDestination.serviceSection?.title }}</h2>
+            <p>{{ selectedDestination.serviceSection?.description }}</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="flip-cards-container">
+            <div *ngFor="let service of selectedDestination.serviceSection.services" class="flip-card-wrapper">
+              <div class="flip-card">
+                <div class="flip-card-front"
+                     [style.backgroundImage]="'url(' + service.imageUrl + ')'">
+                  <h4 class="flip-card-text-shadow">{{ service.title }}</h4>
+                </div>
+
+                <div class="flip-card-back">
+                  <p>{{ service.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Mapping Section -->
+  <div class="map-interface">
+    <!-- Satellite Map -->
+    <div class="satellite-map">
+      <div class="map-background"[ngStyle]="{
+    'background-image': 'url(' + mappingDetails[currentIndex]?.MapLink + ')',
+    'height': containerHeight
+  }"></div>
+
+      <!-- Location Markers - Non-interactive -->
+      <div *ngFor="let destination of mappingDetails; let i = index" class="location-marker"
+        [ngClass]="{ 'active': activeMarkerId === destination.id }" [style.top]="destination.coordinates.top"
+        [style.left]="destination.coordinates.left">
+        <div class="marker-dot"></div>
+        <div class="marker-label">{{ destination.mapname }}</div>
+      </div>
+    </div>
+
+    <!-- Destination Info Card -->
+    <div class="destination-card">
+      <div class="card-content">
+        <h2>{{ mappingDetails[currentIndex]?.mapname }}</h2>
+        <p class="category">{{ mappingDetails[currentIndex]?.category }}</p>
+        <p class="description">{{ mappingDetails[currentIndex]?.mapdescription }}</p>
+
+        <div class="destination-image">
+          <img [src]="mappingDetails[currentIndex]?.image" [alt]="mappingDetails[currentIndex]?.mapname">
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Controls - Interactive -->
+    <div class="navigation-controls">
+      <button class="nav-btn prev-btn" (click)="prevDestination()" [disabled]="currentIndex === 0">
+        &#10094;
+      </button>
+      <button class="nav-btn next-btn" (click)="nextDestination()"
+        [disabled]="currentIndex === mappingDetails.length - 1">
+        &#10095;
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Itinerary Section -->
+      <div class=hero-overlay12>
+        <div class="itinerary-container1">
+          <!-- <header class="hero-section">
+            <div class="hero-content">
+              <h1 class="hero-title">Itinerary for {{ selectedDestination?.name }}</h1>
+
+            </div>
+            <div class="hero-overlay"></div>
+          </header> -->
+
+          <!-- Rest of your itinerary template -->
+          <nav class="day-navigation">
+            <div class="container">
+              <div class="day-label">Day</div>
+              <div class="nav-wrapper">
+                <div class="nav-days">
+                  <button *ngFor="let day of selectedDestination.itinerary; let i = index" class="day-btn"
+                    [class.active]="activeDay === day.day" (click)="scrollToDay(day.day)">
+                    <span class="day-number">{{ day.day }}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </nav>
+      <main class="itinerary-content">
+        <div class="container">
+          <div class="scrollable-days-container">
+            <div *ngFor="let day of selectedDestination.itinerary; let i = index" class="day-section"
+              [id]="'day-' + day.day">
+              <div class="day-header">
+                <div class="day-badge">Day {{ day.day }}</div>
+                <h2 class="day-title">{{ day.title }}</h2>
+              </div>
+
+              <div class="day-content">
+                <!-- Activities Card -->
+                <div class="activity-card">
+                  <h3 class="card-title">
+                    <i class="icon">🗺️</i>
+                    Today's Journey
+                  </h3>
+
+                  <div class="activity-details">
+                    <div class="detail-item" *ngIf="day.transfers">
+                      <span class="detail-label">Transfers:</span>
+                      <span class="detail-value">{{ day.transfers }}</span>
+                    </div>
+
+                    <div class="detail-item" *ngIf="day.locations && day.locations.length">
+                      <span class="detail-label">Locations:</span>
+                      <ul class="excursion-list">
+                        <li *ngFor="let location of day.locations">
+                          {{ location.name }}: {{ location.description }}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="highlights" *ngIf="day.highlights && day.highlights.length">
+                      <h4 class="highlights-title">Highlights</h4>
+                      <div class="highlight-tags">
+                        <span *ngFor="let highlight of day.highlights" class="highlight-tag">
+                          {{ highlight }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Places Photos -->
+                <div class="photo-section" *ngIf="day.images && day.images.places && day.images.places.length">
+                  <h3 class="photo-section-title">
+                    <i class="icon">📸</i>
+                    Places to Visit
+                  </h3>
+                  <div class="photo-grid">
+                    <div *ngFor="let image of day.images.places; let i = index" class="photo-card"
+                      [style.animation-delay.ms]="i * 100">
+                      <img [src]="image" [alt]="'Place ' + (i + 1) + ' for day ' + day.day" loading="lazy">
+                      <div class="photo-overlay">
+                        <span class="photo-number">{{ i + 1 }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Hotel Photos -->
+                <div class="photo-section" *ngIf="day.images && day.images.hotel && day.images.hotel.length">
+                  <h3 class="photo-section-title">
+                    <i class="icon">🏨</i>
+                    Your Accommodation
+                  </h3>
+                  <div class="hotel-info">
+                    <h4 class="hotel-name">{{ day.accommodation }}</h4>
+                    <div class="meal-plan">
+                      <i class="icon">🍽️</i>
+                      <span>{{ day.mealPlan }}</span>
+                    </div>
+                  </div>
+                  <div class="photo-grid hotel-photos">
+                    <div *ngFor="let image of day.images.hotel; let i = index" class="photo-card hotel-photo"
+                      [style.animation-delay.ms]="i * 150">
+                      <img [src]="image" [alt]="'Hotel view ' + (i + 1)" loading="lazy">
+                      <div class="photo-overlay">
+                        <span class="photo-label">{{ getHotelPhotoLabel(day, i) }}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+
+  <!-- Welcome/About Section -->
+  <section class="about-section mt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center heading-section mb-5">
+          <h2 class="text-black mb-2">{{ selectedDestination.welcomeSection?.title }}</h2>
+          <p>{{ selectedDestination.welcomeSection?.description }}</p>
+        </div>
+      </div>
+      <div *ngFor="let item of selectedDestination.aboutItems; let i = index" class="row img-wrap mb-5 mb-lg-0">
+        <div class="col-12">
+          <div class="row">
+            <!-- Alternate the order of columns based on the index -->
+            <div class="mb-4 margin-lg-0 col-lg-6" [ngClass]="{'order-lg-2': i % 2 === 0, 'order-lg-1': i % 2 !== 0}">
+              <a href="#" class="effect">
+                <img [src]="item.imageUrl" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-lg-5 mr-auto align-self-center"
+              [ngClass]="{'order-lg-1': i % 2 === 0, 'order-lg-2': i % 2 !== 0, 'text-lg-right': i % 2 !== 0, 'text-lg-left': i % 2 === 0}">
+              <h2 class="text-black">{{ item.title }}</h2>
+              <p class="mb-4">{{ item.description }}</p>
+              <!-- <a href="#" class="btn btn-about">{{ item.buttonText }}</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
