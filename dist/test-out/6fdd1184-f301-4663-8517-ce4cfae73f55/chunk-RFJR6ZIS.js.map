@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/services/footer-visibility.service.ts"],
+  "sourcesContent": ["import { Injectable } from '@angular/core';\nimport { BehaviorSubject } from 'rxjs';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class FooterVisibilityService {\n  private footerVisible = new BehaviorSubject<boolean>(true);\n  footerVisible$ = this.footerVisible.asObservable();\n\n  setFooterVisibility(visible: boolean) {\n    this.footerVisible.next(visible);\n  }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;IAMa;;;;;AANb;AACA;AAKO,IAAM,0BAAN,MAAMA,yBAAuB;MAC1B,gBAAgB,IAAI,gBAAyB,IAAI;MACzD,iBAAiB,KAAK,cAAc,aAAY;MAEhD,oBAAoB,SAAgB;AAClC,aAAK,cAAc,KAAK,OAAO;MACjC;;AANW,8BAAuB,WAAA;MAHnC,WAAW;QACV,YAAY;OACb;OACY,uBAAuB;;;",
+  "names": ["FooterVisibilityService"]
+}

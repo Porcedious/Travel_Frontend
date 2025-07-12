@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+    
+    <form (ngSubmit)="sendLoginOTP()">
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <div class="phone-input">
+          <select [(ngModel)]="selectedCountryCode" name="countryCode">
+            <option *ngFor="let country of countryCodes" [value]="country.code">
+              {{ country.code }} ({{ country.name }})
+            </option>
+          </select>
+          <input type="text" id="phone" [(ngModel)]="phone" name="phone" required placeholder="Enter phone number">
+        </div>
+      </div>
+
+      <!-- ✅ Send OTP Button -->
+      <button *ngIf="!showOTPInput" type="submit" class="login-btn" [disabled]="isLoading">
+        {{ isLoading ? 'Sending OTP...' : 'Send OTP' }}
+      </button>
+
+      <!-- ✅ OTP Verification Section (Appears After Sending OTP) -->
+      <div *ngIf="showOTPInput" class="otp-container">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="otp" [(ngModel)]="otp" name="otp" required placeholder="Enter OTP">
+      </div>
+
+      <button *ngIf="showOTPInput" class="verify-btn" (click)="verifyLoginOTP()" [disabled]="isLoading">
+        {{ isLoading ? 'Verifying...' : 'Verify OTP' }}
+      </button>
+    </form>
+
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+    <!-- ✅ Sign-up Prompt (Only Shows if User is Not Found) -->
+    <p *ngIf="showSignupPrompt" class="signup-prompt">
+      No account found for this number. <a (click)="navigateToSignup()">Sign up here.</a>
+    </p>
+
+    <!-- ✅ Sign-up Link -->
+    <p class="signup-link">
+      Don't have an account? <button (click)="navigateToSignup()">Sign up</button>
+    </p>
+  </div>
+</div>

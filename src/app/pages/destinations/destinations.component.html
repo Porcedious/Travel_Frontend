@@ -1,0 +1,39 @@
+<body #container class="mat-typography dark">
+
+  <div class="switch-wrap">
+    <div id="switch" #switcher class="hover-target">
+      <div id="circle"></div>
+    </div>
+  </div>
+
+
+
+
+  <div class="section">
+    <div class="case-study-wrapper-container">
+      <ul #list class="case-study-wrapper" *ngFor="let destination of destinations">
+        <li class="case-study-name">
+          <a href="#" class="hover-target" [routerLink]="['/explore', destination.id]">{{ destination.destinationName }}</a>
+        </li>
+      </ul>
+    </div>
+    <ul class="case-study-images">
+      <li *ngFor="let destination of destinations; let i = index">
+        <div class="img-hero-background">
+          <span *ngFor="let img of destination.destinationImage">
+            <div class="image-wrapper">
+              <img [src]="img" alt="">
+              <div class="image-overlay"></div>
+            </div>
+          </span>
+        </div>
+<!--        <div class="hero-number-back">{{ i + 1 }}</div>-->
+        <div class="hero-number">{{ i + 1 }}</div>
+        <div class="hero-number-fixed">{{ destinations.length }}</div>
+      </li>
+    </ul>
+  </div>
+
+
+  <a href="https://themeforest.net/user/ig_design/portfolio" class="link-to-portfolio hover-target" target="_blank"></a>
+  </body>

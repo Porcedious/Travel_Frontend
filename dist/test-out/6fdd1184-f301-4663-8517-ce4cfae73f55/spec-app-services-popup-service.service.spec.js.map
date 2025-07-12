@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/services/popup-service.service.spec.ts", "src/app/services/popup-service.service.ts"],
+  "sourcesContent": ["import { TestBed } from '@angular/core/testing';\n\nimport { PopupServiceService } from './popup-service.service';\n\ndescribe('PopupServiceService', () => {\n  let service: PopupServiceService;\n\n  beforeEach(() => {\n    TestBed.configureTestingModule({});\n    service = TestBed.inject(PopupServiceService);\n  });\n\n  it('should be created', () => {\n    expect(service).toBeTruthy();\n  });\n});\n", "import { Injectable } from '@angular/core';\nimport { BehaviorSubject } from 'rxjs';\n\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class PopupServiceService {\n  private popupState = new BehaviorSubject<boolean>(false);\n  popupState$ = this.popupState.asObservable();\n\n  openPopup() {\n    this.popupState.next(true);\n  }\n\n  closePopup() {\n    this.popupState.next(false);\n  }\n  constructor() { }\n}\n"],
+  "mappings": ";;;;;;;;;;;;;AAAA;;;;ACAA;AACA;AAMO,IAAM,sBAAN,MAAMA,qBAAmB;EACtB,aAAa,IAAI,gBAAyB,KAAK;EACvD,cAAc,KAAK,WAAW,aAAY;EAE1C,YAAS;AACP,SAAK,WAAW,KAAK,IAAI;EAC3B;EAEA,aAAU;AACR,SAAK,WAAW,KAAK,KAAK;EAC5B;EACA,cAAA;EAAgB;;;AAXL,sBAAmB,WAAA;EAH/B,WAAW;IACV,YAAY;GACb;GACY,mBAAmB;;;ADHhC,SAAS,uBAAuB,MAAK;AACnC,MAAI;AAEJ,aAAW,MAAK;AACd,YAAQ,uBAAuB,CAAA,CAAE;AACjC,cAAU,QAAQ,OAAO,mBAAmB;EAC9C,CAAC;AAED,KAAG,qBAAqB,MAAK;AAC3B,WAAO,OAAO,EAAE,WAAU;EAC5B,CAAC;AACH,CAAC;",
+  "names": ["PopupServiceService"]
+}

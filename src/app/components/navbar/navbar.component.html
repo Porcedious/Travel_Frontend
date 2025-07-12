@@ -1,0 +1,54 @@
+<nav class="navbar" [ngClass]="{ 'scrolled': isScrolled }">
+<!-- <nav class="navbar" [ngClass]="{ 'scrolled': isScrolled, 'hidden': isHidden }"> -->
+    <div class="logo">
+    <a href="#"><img src="#" alt="C"></a> 
+    </div>
+  
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li> <button class="common">
+          <a  (click)="gotodestination()" >DESTINATIONS</a>
+        </button>
+      </li>
+        <li>
+          <button class="common">
+            <a routerLink="/themes">THEMES</a>
+          </button>
+        </li>
+      </ul>
+  
+      <!-- <div class="spacer"></div>
+        <button class="enquire-btn"><span>ENQUIRE NOW</span></button> -->
+        <button>
+          <span class="span-mother">
+            <span>E</span>
+            <span>N</span>
+            <span>Q</span>
+            <span>U</span>
+            <span>I</span>
+            <span>R</span>
+            <span>E</span>
+          </span>
+          <span class="span-mother2">
+            <span>E</span>
+            <span>N</span>
+            <span>Q</span>
+            <span>U</span>
+            <span>I</span>
+            <span>R</span>
+            <span>E</span>
+          </span>
+        </button>
+
+      <!-- <button class="enquire-btn">ENQUIRE NOW</button> -->
+      <!-- <div *ngIf="authService.isLoggedIn; else loginBlock">
+        <div class="user-profile">
+          <button class="login-btn2"  (click)="authService.logout()"><span>{{ authService.getCurrentUser()?.fullName }}</span></button>
+        </div>
+      </div> -->
+    
+      <!-- <ng-template #loginBlock>
+        <button class="login-btn" routerLink="/signup">SIGN UP</button>
+      </ng-template> -->
+    </div>
+</nav>
