@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, HostListener, Input  } from '@angular/core';
+import { Component, Output, EventEmitter, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -11,15 +11,14 @@ import { TravelDataService } from '../../services/travel-data.service';
   styleUrls: ['./navbar.component.css'],
   imports: [CommonModule, RouterModule]
 })
-export class NavbarComponent implements OnInit
+export class NavbarComponent
  {
   @Output() destinationClicked = new EventEmitter<string>();
   isLoginModalOpen = false;
   isScrolled = false;
   isHidden = false;
   lastScrollY = 0;
-   isMobile = window.innerWidth <= 768;
-   user: any;
+  user: any;
   destinations: any;
 
   constructor(
@@ -40,7 +39,7 @@ export class NavbarComponent implements OnInit
   onWindowScroll()
   {
     const currentScrollY = window.scrollY;
-    // this.isHidden = currentScrollY > this.lastScrollY && currentScrollY > 100;
+    this.isHidden = currentScrollY > this.lastScrollY && currentScrollY > 100;
     this.isScrolled = currentScrollY > 50;
     this.lastScrollY = currentScrollY;
   }
@@ -56,19 +55,4 @@ export class NavbarComponent implements OnInit
   onDestinationClick(destinationId: string): void {
     this.destinationClicked.emit(destinationId);
   }
-
-   @HostListener('window:scroll', ['$event'])
-   onWindowScroll() {
-     // Don't modify navbar position if on mobile
-     if (this.isMobile) {
-       return;
-     }
-     // Your existing scroll handling code here
-   }
-
-   @HostListener('window:resize', ['$event'])
-   onResize() {
-     this.isMobile = window.innerWidth <= 768;
-   }
-
- }
+}
