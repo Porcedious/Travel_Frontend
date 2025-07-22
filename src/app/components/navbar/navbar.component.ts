@@ -11,7 +11,8 @@ import { TravelDataService } from '../../services/travel-data.service';
   styleUrls: ['./navbar.component.css'],
   imports: [CommonModule, RouterModule]
 })
-export class NavbarComponent {
+export class NavbarComponent
+ {
   @Output() destinationClicked = new EventEmitter<string>();
   isLoginModalOpen = false;
   isScrolled = false;
@@ -35,10 +36,10 @@ export class NavbarComponent {
   }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() 
+  onWindowScroll()
   {
     const currentScrollY = window.scrollY;
-    // this.isHidden = currentScrollY > this.lastScrollY && currentScrollY > 100;
+    this.isHidden = currentScrollY > this.lastScrollY && currentScrollY > 100;
     this.isScrolled = currentScrollY > 50;
     this.lastScrollY = currentScrollY;
   }

@@ -5,6 +5,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TravelDataService } from '../../services/travel-data.service'; // Adjust the path as necessary
 import { FooterVisibilityService } from '../../services/footer-visibility.service';
 import gsap from 'gsap';
+import { Platform } from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-destinations',
@@ -31,7 +32,8 @@ export class DestinationsComponent implements OnInit, AfterViewInit, OnDestroy {
     private route: ActivatedRoute,
     private renderer: Renderer2,
     private travelDataService: TravelDataService, // Inject the service
-    private footerVisibilityService: FooterVisibilityService
+    private footerVisibilityService: FooterVisibilityService,
+    private platform: Platform
   ) {}
 
   ngOnInit() {
@@ -50,7 +52,38 @@ export class DestinationsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.initHoverEffects();
     this.initLightDarkToggle();
     this.triggerFirstHover();
-    
+    if (this.platform.isBrowser && this.platform.ANDROID || this.platform.IOS) {
+      this.triggerFirstHoverForMobile();
+    } else {
+      this.triggerFirstHover();
+    }
+  }
+
+  private triggerFirstHoverForMobile() {
+    const names = document.querySelectorAll('.case-study-name');
+    const images = document.querySelectorAll('.case-study-images li');
+
+    // Set the first image to be visible by default
+    if (names.length > 0 && images.length > 0) {
+      (names[0] as HTMLElement).classList.add('active');
+      (images[0] as HTMLElement).classList.add('show');
+    }
+
+    // Add touch event listeners for mobile devices
+    names.forEach((name, index) => {
+      this.renderer.listen(name, 'touchstart', (event) => {
+        event.preventDefault(); // Prevent default touch behavior
+        document.querySelector('.case-study-name.active')?.classList.remove('active');
+        document.querySelector('.case-study-images li.show')?.classList.remove('show');
+        name.classList.add('active');
+        images[index].classList.add('show');
+
+        // On second touch, navigate to the explore page
+        this.renderer.listen(name, 'touchend', () => {
+          this.navigateToExplore(this.destinations[index].id);
+        });
+      });
+    });
   }
   gsapAnimation(){
     gsap.to(this.container.nativeElement, {
@@ -60,7 +93,7 @@ export class DestinationsComponent implements OnInit, AfterViewInit, OnDestroy {
       ease: 'power2.out'
     });
   }
-  
+
 
   setActiveIndex(index: number) {
     this.activeIndex = index;
@@ -86,7 +119,7 @@ export class DestinationsComponent implements OnInit, AfterViewInit, OnDestroy {
     this.renderer.listen('document', 'mousemove', (event: MouseEvent) => {
       const x = `${event.clientX}px`;
       const y = `${event.clientY}px`;
-  
+
       this.setCursorPosition(this.cursor, x, y);
       this.setCursorPosition(this.cursor2, x, y);
       this.setCursorPosition(this.cursor3, x, y);

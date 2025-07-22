@@ -413,3 +413,19 @@ body.light .case-study-wrapper .case-study-name.active a {
   border-radius: 50%;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
 }
+
+
+ @media (max-width: 767px) {
+   .case-study-images li:first-child {
+     display: block; /* Ensure the first image is visible by default */
+   }
+
+   .case-study-wrapper .case-study-name a {
+     font-size: 26px;
+     letter-spacing: 1px;
+   }
+
+   .case-study-images li .hero-number-back {
+     font-size: 32vw;
+   }
+ }
