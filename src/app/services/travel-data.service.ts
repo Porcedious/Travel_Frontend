@@ -208,7 +208,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -237,7 +238,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -266,7 +268,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -295,7 +298,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -324,7 +328,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -531,7 +536,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -560,7 +566,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+            placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -589,7 +596,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -618,7 +626,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -647,7 +656,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -854,7 +864,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -883,7 +894,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -912,7 +924,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -941,7 +954,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -970,7 +984,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -1177,7 +1192,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -1206,7 +1222,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -1235,7 +1252,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -1264,7 +1282,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -1293,7 +1312,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -1497,7 +1517,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -1526,7 +1547,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -1555,7 +1577,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -1584,7 +1607,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -1613,7 +1637,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -1816,7 +1841,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -1845,7 +1871,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -1874,7 +1901,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -1903,7 +1931,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -1932,7 +1961,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -2139,7 +2169,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -2168,7 +2199,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -2197,7 +2229,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -2226,7 +2259,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -2255,7 +2289,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -2410,7 +2445,8 @@ export class TravelDataService {
             {
               icon: 'fas fa-drumstick-bite',
               title: 'Local Cuisine',
-              imageUrl: "Https://res.cloudinary.com/djwss052h/image/upload/v1752073141/maldives_adventure_mbgilk.jpg",              description: 'savor the exquisite local cuisine and dining experiences.'
+              imageUrl: "Https://res.cloudinary.com/djwss052h/image/upload/v1752073141/maldives_adventure_mbgilk.jpg",
+              description: 'savor the exquisite local cuisine and dining experiences.'
             },
             {
               icon: 'fas fa-umbrella-beach',
@@ -2461,7 +2497,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -2490,7 +2527,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -2519,7 +2557,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -2548,7 +2587,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -2577,7 +2617,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
         ],
       cost: 110000,
@@ -2784,7 +2825,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+            hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -2813,7 +2855,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 3,
@@ -2842,7 +2885,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 4,
@@ -2871,7 +2915,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 5,
@@ -2900,7 +2945,8 @@ export class TravelDataService {
                 'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
               ]
             },
-            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+            hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+            placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',],
           },
         ],
       cost: 110000,
@@ -3112,7 +3158,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -3141,7 +3188,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -3170,7 +3218,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -3199,7 +3248,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -3228,7 +3278,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -3432,7 +3483,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -3461,7 +3513,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -3490,7 +3543,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -3519,7 +3573,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -3548,7 +3603,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -3753,7 +3809,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -3782,7 +3839,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -3811,7 +3869,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -3840,7 +3899,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -3869,7 +3929,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -4074,7 +4135,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -4103,7 +4165,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -4132,7 +4195,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -4161,7 +4225,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -4190,7 +4255,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -4395,7 +4461,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -4424,7 +4491,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -4453,7 +4521,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -4482,7 +4551,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -4511,7 +4581,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -4719,7 +4790,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -4748,7 +4820,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -4777,7 +4850,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -4806,7 +4880,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -4835,7 +4910,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -5040,7 +5116,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -5069,7 +5146,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -5098,7 +5176,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -5127,7 +5206,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -5156,7 +5236,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,
@@ -5361,7 +5442,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden']
+              hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 2,
@@ -5390,7 +5472,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 3,
@@ -5419,7 +5502,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 4,
@@ -5448,7 +5532,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
             {
               day: 5,
@@ -5477,7 +5562,8 @@ imageUrl: "Https://your-image-url.com/image.jpg",              description: 'sav
                   'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg'
                 ]
               },
-              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck']
+              hotelPhotoLabels: ['Ocean View', 'Beachfront', 'Dining Area', 'Swimming Pool', 'Sunset Deck'],
+placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
             },
           ],
         cost: 110000,

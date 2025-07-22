@@ -201,17 +201,22 @@
                 </div>
 
                 <!-- Places Photos -->
-                <div class="photo-section" *ngIf="day.images && day.images.places && day.images.places.length">
+                <div class="photo-section" *ngIf="day?.images?.places?.length">
                   <h3 class="photo-section-title">
                     <i class="icon">📸</i>
                     Places to Visit
                   </h3>
                   <div class="photo-grid">
                     <div *ngFor="let image of day.images.places; let i = index" class="photo-card"
-                      [style.animation-delay.ms]="i * 100">
-                      <img [src]="image" [alt]="'Place ' + (i + 1) + ' for day ' + day.day" loading="lazy">
+                         [style.animation-delay.ms]="i * 100">
+                      <img [src]="image" [alt]="day.placePhotoLabels?.[i] || 'Place ' + (i + 1)" loading="lazy">
                       <div class="photo-overlay">
-                        <span class="photo-number">{{ i + 1 }}</span>
+        <span class="photo-label">
+          {{ day.placePhotoLabels?.[i] || 'Place ' + (i + 1) }}
+        </span>
+<!--                        <span class="photo-number">-->
+<!--          {{ day.placePhotoLabels?.[i] || 'Place ' + (i + 1) }}-->
+<!--        </span>-->
                       </div>
                     </div>
                   </div>
