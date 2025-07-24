@@ -1,9 +1,9 @@
 <nav class="navbar" [ngClass]="{ 'scrolled': isScrolled }">
 <!-- <nav class="navbar" [ngClass]="{ 'scrolled': isScrolled, 'hidden': isHidden }"> -->
     <div class="logo">
-    <a href="#"><img src="#" alt="C"></a> 
+    <a href="#"><img src="#" alt="C"></a>
     </div>
-  
+
     <div class="nav-right">
       <ul class="nav-links">
         <li> <button class="common">
@@ -16,10 +16,10 @@
           </button>
         </li>
       </ul>
-  
+
       <!-- <div class="spacer"></div>
         <button class="enquire-btn"><span>ENQUIRE NOW</span></button> -->
-        <button>
+      <button (click)="openEnquirePopup()">
           <span class="span-mother">
             <span>E</span>
             <span>N</span>
@@ -46,7 +46,7 @@
           <button class="login-btn2"  (click)="authService.logout()"><span>{{ authService.getCurrentUser()?.fullName }}</span></button>
         </div>
       </div> -->
-    
+
       <!-- <ng-template #loginBlock>
         <button class="login-btn" routerLink="/signup">SIGN UP</button>
       </ng-template> -->

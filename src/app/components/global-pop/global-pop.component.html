@@ -1,0 +1,237 @@
+<div class="popup-overlay" [class.active]="isOpen" (click)="closePopup()">
+  <div class="popup-container" (click)="$event.stopPropagation()">
+    <!-- Header -->
+    <div class="popup-header">
+      <h2>Plan Your Dream Trip</h2>
+      <button class="close-btn" (click)="closePopup()" aria-label="Close popup">
+        <span>&times;</span>
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="(currentStep / totalSteps) * 100"></div>
+    </div>
+    <div class="step-indicator">
+      Step {{ currentStep }} of {{ totalSteps }}
+    </div>
+
+    <!-- Form Content -->
+    <div class="popup-content">
+      <!-- Step 1: Personal Information -->
+      <div class="form-step" [class.active]="currentStep === 1">
+        <h3>Tell us about yourself</h3>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="formData.name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="formData.email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input
+            type="tel"
+            id="phone"
+            [(ngModel)]="formData.phone"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Step 2: Travel Preferences -->
+      <div class="form-step" [class.active]="currentStep === 2">
+        <h3>Where would you like to go?</h3>
+
+        <!-- Destination Input with Dropdown -->
+<!--        <div class="form-group destination-group">-->
+<!--          <label for="destination">Destinations *</label>-->
+<!--          <div class="destination-input-container">-->
+<!--            <input-->
+<!--              type="text"-->
+<!--              id="destination"-->
+<!--              [(ngModel)]="destinationInput"-->
+<!--              (input)="onDestinationInput()"-->
+<!--              (focus)="onDestinationFocus()"-->
+<!--              (blur)="onDestinationBlur()"-->
+<!--              (keypress)="onDestinationKeyPress($event)"-->
+<!--              placeholder="Type destination name..."-->
+<!--            />-->
+<!--            <button-->
+<!--              type="button"-->
+<!--              class="add-destination-btn"-->
+<!--              (click)="addDestination()"-->
+<!--              [disabled]="!destinationInput.trim()"-->
+<!--            >-->
+<!--              Add-->
+<!--            </button>-->
+        <div class="form-group destination-group">
+          <label for="destination">Destinations *</label>
+          <div class="destination-input-container">
+            <input
+              type="text"
+              id="destination"
+              [(ngModel)]="destinationInput"
+              (input)="onDestinationInput()"
+              (focus)="onDestinationFocus()"
+              (blur)="onDestinationBlur()"
+              (keypress)="onDestinationKeyPress($event)"
+              placeholder="Type destination name..."
+            />
+            <button
+              type="button"
+              class="add-destination-btn"
+              (click)="addDestination()"
+              [disabled]="!destinationInput.trim()"
+            >
+              Add
+            </button>
+          </div>
+          <div class="destination-dropdown" *ngIf="showDestinationDropdown">
+            <div
+              class="destination-item"
+              *ngFor="let destination of filteredDestinations"
+              (click)="selectDestination(destination)"
+            >
+              {{ destination.name }}
+            </div>
+          </div>
+
+
+        <!-- Destination Dropdown -->
+          <div class="destination-dropdown" [class.show]="showDestinationDropdown">
+            <div
+              class="destination-item"
+              *ngFor="let destination of filteredDestinations"
+              (click)="selectDestination(destination)"
+            >
+              <img [src]="destination.heroImage" [alt]="destination.name" class="destination-thumb">
+              <div class="destination-info">
+                <div class="destination-name">{{ destination.name }}</div>
+                <div class="destination-desc">{{ destination.description }}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Selected Destinations -->
+          <div class="selected-destinations" *ngIf="formData.destinations.length > 0">
+            <div class="destination-tag" *ngFor="let dest of formData.destinations; let i = index">
+              {{ dest }}
+              <button type="button" (click)="removeDestination(i)" class="remove-tag">×</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="travelDates">Travel Dates *</label>
+          <input
+            type="text"
+            id="travelDates"
+            [(ngModel)]="formData.travelDates"
+            placeholder="e.g., March 2024 or Flexible"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="travelers">Number of Travelers</label>
+          <select id="travelers" [(ngModel)]="formData.travelers">
+            <option value="1">1 Traveler</option>
+            <option value="2">2 Travelers</option>
+            <option value="3">3 Travelers</option>
+            <option value="4">4 Travelers</option>
+            <option value="5">5+ Travelers</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 3: Trip Details -->
+      <div class="form-step" [class.active]="currentStep === 3">
+        <h3>Trip Details</h3>
+        <div class="form-group">
+          <label for="budget">Budget Range *</label>
+          <select id="budget" [(ngModel)]="formData.budget" required>
+            <option value="">Select budget range</option>
+            <option value="under-1000">Under $1,000</option>
+            <option value="1000-3000">$1,000 - $3,000</option>
+            <option value="3000-5000">$3,000 - $5,000</option>
+            <option value="5000-10000">$5,000 - $10,000</option>
+            <option value="over-10000">Over $10,000</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tripType">Trip Type *</label>
+          <select id="tripType" [(ngModel)]="formData.tripType" required>
+            <option value="">Select trip type</option>
+            <option *ngFor="let type of tripTypes" [value]="type">{{ type }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="specialRequests">Special Requests</label>
+          <textarea
+            id="specialRequests"
+            [(ngModel)]="formData.specialRequests"
+            placeholder="Any special requirements or preferences..."
+            rows="4"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="popup-footer">
+      <div class="button-group">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="prevStep()"
+          [disabled]="currentStep === 1"
+          *ngIf="currentStep > 1"
+        >
+          Previous
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="nextStep()"
+          [disabled]="!isFormValid()"
+          *ngIf="currentStep < totalSteps"
+        >
+          Next
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="submitForm()"
+          [disabled]="!isFormValid() || isSubmitting"
+          *ngIf="currentStep === totalSteps"
+        >
+          <span *ngIf="isSubmitting">Submitting...</span>
+          <span *ngIf="!isSubmitting">Submit Request</span>
+        </button>
+      </div>
+
+      <div class="submit-message" *ngIf="submitMessage" [class.success]="submitMessage.includes('Thank you')" [class.error]="submitMessage.includes('error')">
+        {{ submitMessage }}
+      </div>
+    </div>
+  </div>
+</div>

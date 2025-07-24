@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, ViewChild, ViewContainerRef, OnInit, ChangeDetectorRef } from '@angular/core';
-import { RouterOutlet,Router,NavigationEnd } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from "./components/footer/footer.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -8,13 +8,14 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { DestinationsComponent } from './pages/destinations/destinations.component';
 import { TravelDataService } from './services/travel-data.service';
+import { GlobalPopComponent } from "./components/global-pop/global-pop.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, NavbarComponent, CommonModule],
+  imports: [CommonModule, RouterOutlet, FooterComponent,NavbarComponent, GlobalPopComponent],
 })
 export class AppComponent implements OnInit {
   @ViewChild('popupContainer', { read: ViewContainerRef, static: true }) popupContainer!: ViewContainerRef;
@@ -32,11 +33,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.footerVisible$ = this.footerVisibilityService.footerVisible$;
-    // If you have any logic that updates footerVisible$, ensure to call this.cdr.detectChanges() afterward.
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
-        window.scrollTo( 0,0 );
+        window.scrollTo(0, 0);
       });
   }
 
@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
         const componentRef = this.popupContainer.createComponent(componentFactory);
         componentRef.instance.destinations = this.destinations;
         this.isPopupOpen = true;
-        this.cdr.detectChanges(); // Manually trigger change detection
+        this.cdr.detectChanges();
       }
     } catch (error) {
       console.error('Error showing destinations:', error);
@@ -67,8 +67,6 @@ export class AppComponent implements OnInit {
   closePopup(): void {
     this.popupContainer.clear();
     this.isPopupOpen = false;
-    this.cdr.detectChanges(); // Manually trigger change detection
+    this.cdr.detectChanges();
   }
-
-  
 }

@@ -537,7 +537,7 @@ placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
               ]
             },
             hotelPhotoLabels: ['Suite', 'Pool', 'Lobby', 'Restaurant', 'Spa', 'Garden'],
-placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
+            ngplacePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
           },
           {
             day: 2,
@@ -5598,5 +5598,20 @@ placePhotoLabels: ['Seminyak Beach', 'Surfing Heaven',]
 
   getAllLocations() {
     return [...this.locations, ...this.trendylocations];
+  }
+  // New method to get destination names for dropdown
+  getDestinationNames(): string[] {
+    const allLocations = this.getAllLocations()
+    return allLocations.map((location) => location.name)
+  }
+
+  // New method to search destinations
+  searchDestinations(query: string) {
+    const allLocations = this.getAllLocations()
+    return allLocations.filter(
+      (location) =>
+        location.name.toLowerCase().includes(query.toLowerCase()) ||
+        location.description.toLowerCase().includes(query.toLowerCase()),
+    )
   }
 }

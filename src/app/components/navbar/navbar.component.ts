@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { TravelDataService } from '../../services/travel-data.service';
+import { PopupServiceService } from "../../services/popup.service.service"
 
 @Component({
   selector: 'app-navbar',
@@ -24,7 +25,8 @@ export class NavbarComponent
   constructor(
     private travelDataService: TravelDataService,
     public authService: AuthService,
-    private router: Router
+    private router: Router,
+    private popupService: PopupServiceService,
     ) {
     this.authService.currentUser$.subscribe(user => {
       this.user = user;
@@ -34,6 +36,10 @@ export class NavbarComponent
   async gotodestination() {
     await this.router.navigate(['/destinations'])
   }
+
+   openEnquirePopup() {
+     this.popupService.openPopup()
+   }
 
   @HostListener('window:scroll', [])
   onWindowScroll()

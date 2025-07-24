@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     this.featuredDestinations = destinations.filter(destination =>
       targetIds.includes(destination.id)
     );
-    console.log('Filtered destinations:', this.featuredDestinations);
   }
 
   fetchFeaturedPackages() {
